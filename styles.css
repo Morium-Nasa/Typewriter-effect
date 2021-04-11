@@ -1,0 +1,51 @@
+/*google fonts*/
+@import url(https://fonts.googleapis.com/css?family=Anonymous+pro);
+/*global*/
+html{
+	min-height: 100%;
+	overflow: hidden;
+}
+body{
+	height: calc(100vh-8em)
+	padding:4em;
+	color: rgba(255,255,255,0.75);
+	font-family: 'Anonymous pro',monospace;
+	background-color: rgba(25,25,25);
+
+}
+.line{
+	position: relative;
+	top: 50%;
+	width: 16em;
+	margin: 0 auto;
+	border-right: 2px solid rgba(255,255,255,0.75);
+	font-size: 180%;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+	transform: translateY(-50%);
+}
+/*Animation*/
+.anim-typewritter{
+	animation: typewritter 4s steps(40) 1s 1 normal both,
+	blinkTextcursor 500ms steps(40) infinite normal;
+
+	} 
+
+	@keyframes typewritter{
+		from{
+			width: 0;
+		}
+		to{
+			width: 16em;
+		}
+	}
+
+	@keyframes blinkTextcursor{
+		from{
+			border-right-color: rgba(255,255,255,0.75);
+		}
+		to{
+			border-right-color: transparent;
+		}
+	}
